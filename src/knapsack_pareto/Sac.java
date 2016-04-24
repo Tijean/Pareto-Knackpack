@@ -5,10 +5,8 @@
  */
 package knapsack_pareto;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
-import java.util.Iterator;
 
 /**
  *
@@ -42,7 +40,7 @@ public class Sac {
         return true;
     }
     /*Prend en consédération les 3 paramètre*/
-    boolean valide2(){
+    boolean validePoid(){
         int weight = 0;
         int lipide=0;
         int glucose=0;
@@ -156,5 +154,23 @@ public class Sac {
             }
         }
         return liste;
+    }
+    
+    public boolean dominant(Sac sac){
+        if(getGlucose()>sac.getGlucose() && getLipide()>=sac.getLipide()){
+            return true;
+        }
+        if(getGlucose()>=sac.getGlucose() && getLipide()>sac.getLipide()){
+            return true;
+        }
+        return false;
+    }
+    public boolean dominantPoid(Sac sac){
+        if(getGlucose()<sac.getGlucose() || getLipide()<sac.getLipide() || getWeight()<sac.getWeight()){
+            return false;
+        } else if (getGlucose()==sac.getGlucose() && getLipide()==sac.getLipide() || getWeight()==sac.getWeight() ){
+            return false;
+        }
+        return false;
     }
 }
