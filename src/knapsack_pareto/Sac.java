@@ -149,7 +149,7 @@ public class Sac {
             //System.out.println(sac);
             HashSet<Sac> listTemp = genererRecursif(index + 1, sac);
             liste.addAll(listTemp);
-            if (sac.valide2() && !liste.contains(sac)) {
+            if (sac.valide() && !liste.contains(sac)) {
                 //System.out.println(sac.stat());
                 //System.out.println(sac);
                 liste.add(sac);
