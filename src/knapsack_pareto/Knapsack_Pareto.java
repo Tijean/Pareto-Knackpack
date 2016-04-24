@@ -19,7 +19,8 @@ public class Knapsack_Pareto {
     public static void main(String[] args) {
         HashSet<Sac> list = Sac.genererSacPossible();
         for (Sac iterator : list) {
-            System.out.println(iterator.stat());
+            //System.out.println(iterator.stat());
+            System.out.println(iterator.toString());
         }
     }
 

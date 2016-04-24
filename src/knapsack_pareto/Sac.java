@@ -75,6 +75,9 @@ public class Sac {
             text += NAMES[i] + " : " + contenus[i];
             text += System.getProperty("line.separator");
         }
+        text+= "Glucose : " + getGlucose() +System.getProperty("line.separator");        
+        text+= "Lipide : " + getLipide()+System.getProperty("line.separator");
+        text+= "Poid : " + getWeight() +System.getProperty("line.separator");
         return text;
     }
     public String stat(){
