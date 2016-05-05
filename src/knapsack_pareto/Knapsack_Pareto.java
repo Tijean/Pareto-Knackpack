@@ -19,11 +19,13 @@ public class Knapsack_Pareto {
      */
     public static void main(String[] args) {
         HashSet<Sac> list = Sac.genererSacPossible();
-        //algoTest(list);
+        algoTest(list);
+        /*
         for (Sac iterator : list) {
             System.out.println(iterator.stat());
             //System.out.println(iterator.toString());
         }
+        */
     }
     public static void testerDom(HashSet<Sac> list){
         Sac sac =null;
@@ -61,7 +63,7 @@ public class Knapsack_Pareto {
                 }
             }
         }
-        //System.out.println(output.size());
+        
         for(Sac it: output){
             //System.out.println(it.stat());
             System.out.println(it);
